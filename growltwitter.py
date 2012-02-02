@@ -2,7 +2,7 @@
 # coding:utf-8
 
 #
-# Last Updated on 2012/02/02 21:14:20 .
+# Last Updated on 2012/02/02 22:14:47 .
 #
 
 u"""
@@ -14,8 +14,7 @@ ToDo
 =====
 
 - growltwitter.png の作成
-- nouser.png の作成
-- ホーム以下になければ.growltwitter を作成する。
+- ~/.growltwitter/icons にデフォルトの画像を配置するようにする
 
 """
 
@@ -33,7 +32,7 @@ if not '.growltwitter' in os.listdir(_HOMEDIR):
     print "Creating ~/.growltwitter/icons"
     try:
         os.mkdir(os.path.join(_HOMEDIR, '.growltwitter'))
-        os.mkdir(os.path.join(_HOMEDIR, '.growltwitter', '.icons'))
+        os.mkdir(os.path.join(_HOMEDIR, '.growltwitter', 'icons'))
     except:
         print "ERROR: Creating directory ~/.growltwitter/icons"
         # ディレクトリを作成できない場合はエラーログを出して終了する
